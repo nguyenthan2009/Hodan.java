@@ -38,10 +38,7 @@ public class Main {
                     manager.HienThongtin(num);
                     break;
                 case 3:
-                    System.out.println("Nhập năm nay để xem hô dân nào có người mừng thọ");
-                    if(manager.mungTho(2021)){
-                         manager.HienThongtin(manager.getSoNha());
-                    }
+                    manager.mungTho();
 
                 case 0:
                     System.exit(0);

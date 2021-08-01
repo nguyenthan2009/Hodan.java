@@ -1,5 +1,6 @@
 import com.sun.scenario.effect.impl.sw.sse.SSEBlend_SRC_OUTPeer;
 
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -18,14 +19,15 @@ public class Manager extends Hodan {
         }
     }
 
-    public boolean mungTho(int nam) {
-        for (int i = 0; i < ListHodan.size(); i++) {
-                int a = ListHodan.get(i).getYear();
-                if (a - nam == 80) {
-                    return true;
-                }
+    public void mungTho() {
+            for (int i = 0; i <ListHodan.size(); i++) {
+               for(int j=0;j<ListHodan.get(i).getSoThanhVien();j++){
+                   Nguoi nguoi = ListHodan.get(i).getThanhvien()[j];
+                   if(nguoi.getNgaySinh().plusYears(80).isBefore(LocalDate.now())){
+                       System.out.println(nguoi);
+                   }
+               }
             }
-        return false;
 
     }
 }

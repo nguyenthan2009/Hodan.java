@@ -1,10 +1,10 @@
 import java.time.LocalDate;
 import java.util.Arrays;
 
-public class Hodan extends Nguoi {
+public class Hodan  {
     private int SoThanhVien;
     private int SoNha;
-    private Nguoi Thanhvien[] = new Nguoi[10];
+    private Nguoi Thanhvien[] = new Nguoi[1] ;
     public Hodan(){
 
     }
